@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
-
+import Course from "../Course/course";
+import './Courses.css'
 
 
 const Courses = () => {
@@ -13,7 +14,16 @@ const Courses = () => {
     }, []);
     return (
         <div>
-            <h1> Courses: {courses.length}</h1>
+            <div className="course-container md:w-2/3 mb-10">
+                {
+                    courses.map(course => <Course
+                        key={course.id}
+                        course={course}
+                    >
+
+                    </Course>)
+                }
+            </div>
         </div>
     );
 };

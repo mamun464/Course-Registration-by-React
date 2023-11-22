@@ -3,72 +3,72 @@
         "id": 1,
         "title": "Introduction to C Programming",
         "description": "Learn the fundamentals of C programming language, including syntax, data types, and control structures. Develop essential programming skills for software development.",
-        "price_bdt": 2499.99,
+        "price_bdt": 2499,
         "credit_hours": 3,
-        "image": "c_programming_image.jpg"
+        "image": "https://i.ibb.co/p0pWsS7/c-Programing.png"
     },
     {
         "id": 2,
         "title": "Introduction to Algorithms",
         "description": "Explore algorithmic concepts and problem-solving techniques. Understand key algorithm design paradigms and their applications in solving real-world problems.",
-        "price_bdt": 2999.99,
+        "price_bdt": 2999,
         "credit_hours": 4,
-        "image": "algorithms_image.jpg"
+        "image": "https://i.ibb.co/KhcR4BP/algorithom.png"
     },
     {
         "id": 3,
         "title": "Introduction to C++ for DSA",
         "description": "Gain proficiency in C++ programming and its application in Data Structures and Algorithms (DSA). Develop problem-solving skills using C++ language features.",
-        "price_bdt": 3499.99,
+        "price_bdt": 3499,
         "credit_hours": 4,
-        "image": "cplusplus_dsa_image.jpg"
+        "image": "https://i.ibb.co/8KXRwmm/c.png"
     },
     {
         "id": 4,
         "title": "Basic Data Structures",
         "description": "Build a strong foundation in fundamental data structures such as arrays, linked lists, and trees. Learn how to implement and manipulate data structures efficiently.",
-        "price_bdt": 2749.99,
+        "price_bdt": 2749,
         "credit_hours": 3,
-        "image": "data_structures_image.jpg"
+        "image": "https://i.ibb.co/gzn8bLB/ds.png"
     },
     {
         "id": 5,
         "title": "Introduction to OOP Python",
         "description": "Explore the principles of Object-Oriented Programming (OOP) using Python. Learn to design and implement classes, objects, and inheritance in Python applications.",
-        "price_bdt": 2499.99,
+        "price_bdt": 2499,
         "credit_hours": 1,
-        "image": "python_oop_image.jpg"
+        "image": "https://i.ibb.co/qRdt7tZ/python.png"
     },
     {
         "id": 6,
         "title": "Software Engineering",
         "description": "Understand the principles and practices of software engineering. Cover topics such as requirements analysis, design patterns, and software testing.",
-        "price_bdt": 3999.99,
+        "price_bdt": 3999,
         "credit_hours": 5,
-        "image": "software_engineering_image.jpg"
+        "image": "https://i.ibb.co/zFjNs6G/software.png"
     },
     {
         "id": 7,
         "title": "AWS, Cloud Computing",
         "description": "Explore Amazon Web Services (AWS) and cloud computing concepts. Learn to deploy and manage scalable applications in the cloud environment.",
-        "price_bdt": 4499.99,
+        "price_bdt": 4499,
         "credit_hours": 5,
-        "image": "aws_cloud_image.jpg"
+        "image": "https://i.ibb.co/pPq0NTd/aws.png"
     },
     {
         "id": 8,
         "title": "Database (MySQL)",
         "description": "Master the basics of database management using MySQL. Learn to design and implement relational databases, query data, and ensure data integrity.",
-        "price_bdt": 2999.99,
+        "price_bdt": 2999,
         "credit_hours": 4,
-        "image": "mysql_database_image.jpg"
+        "image": "https://i.ibb.co/mqV4sLr/sql.png"
     },
     {
         "id": 9,
         "title": "Problem-Solving Part",
         "description": "Enhance your problem-solving skills through hands-on exercises and real-world scenarios. Apply critical thinking to solve complex problems efficiently.",
-        "price_bdt": 1999.99,
+        "price_bdt": 1999,
         "credit_hours": 2,
-        "image": "problem_solving_image.jpg"
+        "image": "https://i.ibb.co/bs8gHkY/problem-solving.png"
     }
 ]
