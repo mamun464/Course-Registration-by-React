@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Course from "../Course/course";
 import './Courses.css'
+import PropTypes from 'prop-types';
 
 
-const Courses = () => {
+const Courses = ({ handleAddToList }) => {
     const [courses, setCourses] = useState([]);
     useEffect(() => {
         fetch('courses.json')
@@ -19,6 +20,7 @@ const Courses = () => {
                     courses.map(course => <Course
                         key={course.id}
                         course={course}
+                        handleAddToList={handleAddToList}
                     >
 
                     </Course>)
@@ -27,5 +29,11 @@ const Courses = () => {
         </div>
     );
 };
+
+Courses.propTypes = {
+
+    handleAddToList: PropTypes.func,
+    // handleReadingTime: PropTypes.func
+}
 
 export default Courses;

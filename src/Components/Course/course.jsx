@@ -2,7 +2,7 @@ import { TbCurrencyTaka } from "react-icons/tb";
 import { IoBookOutline } from "react-icons/io5";
 import PropTypes from 'prop-types';
 
-const Course = ({ course }) => {
+const Course = ({ course, handleAddToList }) => {
     const { title, description, price_bdt, credit_hours, image } = course;
     return (
         <div className="bg-[#fff] p-4 rounded-xl">
@@ -30,7 +30,10 @@ const Course = ({ course }) => {
                 </div>
             </div>
 
-            <button className="w-full text-[#fff] font-semibold text-[18px] bg-[#2F80ED] rounded-lg py-2 border border-solid border-blue-500  hover:bg-blue-600">Select</button>
+            <button onClick={() => {
+                handleAddToList(course)
+            }}
+                className="w-full text-[#fff] font-semibold text-[18px] bg-[#2F80ED] rounded-lg py-2 border border-solid border-blue-500  hover:bg-blue-600">Select</button>
 
         </div>
     );
@@ -38,7 +41,7 @@ const Course = ({ course }) => {
 
 Course.propTypes = {
     course: PropTypes.object.isRequired,
-    // handleAddToBookmarks: PropTypes.func,
+    handleAddToList: PropTypes.func,
     // handleReadingTime: PropTypes.func
 }
 
