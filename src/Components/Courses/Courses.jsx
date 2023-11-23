@@ -14,7 +14,7 @@ const Courses = () => {
     }, []);
     return (
         <div>
-            <div className="course-container md:w-2/3 mb-10">
+            <div className="mb-10 course-container ">
                 {
                     courses.map(course => <Course
                         key={course.id}

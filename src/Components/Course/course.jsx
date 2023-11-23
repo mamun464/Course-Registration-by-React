@@ -6,7 +6,7 @@ const Course = ({ course }) => {
     const { title, description, price_bdt, credit_hours, image } = course;
     return (
         <div className="bg-[#fff] p-4 rounded-xl">
-            <img src={image} alt="No_Image_Found" />
+            <img className="w-full" src={image} alt="No_Image_Found" />
 
             <h1 className="text-[#1C1B1B]  font-semibold mt-4 mb-1">{title}</h1>
 
