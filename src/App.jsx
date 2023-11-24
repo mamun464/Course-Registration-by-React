@@ -4,14 +4,58 @@ import { useState } from 'react';
 import './App.css'
 import Courses from './Components/Courses/Courses';
 import SidePanel from './Components/SidePanel/SidePanel';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [courses, setCourses] = useState([]);
+  const [credit, setCredit] = useState(0);
+  const [remaining, setRemaining] = useState(20);
+  const [prices, setPrices] = useState(0);
 
   const handleAddToList = (courseList) => {
-    const newList = [...courses, courseList]
-    setCourses(newList)
-    console.log(courses)
+    let isAlreadyExists = courses.some(course => course.id === courseList.id);
+    if (isAlreadyExists) {
+      toast.warn('Already Taken this course!', {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      let totalCredit = (courseList.credit_hours || 0) + credit
+      let remainingCredit = remaining - (courseList.credit_hours || 0)
+      let totalPrice = prices + (courseList.price_bdt || 0)
+      // courses.reduce((sum, course) => sum + (course.credit_hours || 0), 0);
+
+      if (totalCredit <= 20) {
+        const newList = [...courses, courseList]
+        setCourses(newList)
+        setCredit(totalCredit)
+        setRemaining(remainingCredit)
+        setPrices(totalPrice)
+
+      }
+      else {
+        toast.warn('Credit Limit cross!', {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+
+
+    }
+
   }
 
   return (
@@ -24,9 +68,13 @@ function App() {
           ></Courses>
           <SidePanel
             courses={courses}
+            credit={credit}
+            remaining={remaining}
+            prices={prices}
           ></SidePanel>
         </div>
       </div>
+      <ToastContainer />
     </>
   )
 }
