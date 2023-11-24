@@ -1,8 +1,7 @@
 
 ##  Questions Answer 1
 3 Project features:
-
--Show all courses in Grid View (repeat(3, 1fr) )
+- Show all courses in Grid View (repeat(3, 1fr) )
 - Same Course not gonna to add twice
 - Cannot Cross the Credit limit
 - when breaking any validation it gives a toast warning according to which validation breaks. 
