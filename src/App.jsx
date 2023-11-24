@@ -32,7 +32,7 @@ function App() {
       let totalPrice = prices + (courseList.price_bdt || 0)
       // courses.reduce((sum, course) => sum + (course.credit_hours || 0), 0);
 
-      if (totalCredit <= 20) {
+      if (totalCredit <= 20 && remainingCredit >= 0) {
         const newList = [...courses, courseList]
         setCourses(newList)
         setCredit(totalCredit)
